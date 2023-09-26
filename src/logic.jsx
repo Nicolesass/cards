@@ -15,12 +15,10 @@ const cardDeck = createDeck()
 
 
 
-export const splitDeck = () => {
-   const shuffleDeck = structuredClone(cardDeck).sort(()=> Math.random()-0.5)
-   return shuffleDeck
+export const shuffleDeck = () => {
+   const shuffledDeck = structuredClone(cardDeck).sort(()=> Math.random()-0.5)
+   return shuffledDeck
    
 }
 //splitDeck()
-const player1 = splitDeck().slice(0,26)
-const player2 = splitDeck().slice(26)
-console.log({player1, player2})
+
